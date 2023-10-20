@@ -1,0 +1,11 @@
+@import "src/mixin/mixin.scss";
+
+.header {
+  @include flex-container(column, center, center);
+  @include format-text(Roboto, 25px, 400, white, 50px, center);
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  z-index: 2;
+  height: 50px;
+}

@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+// Устанавливаем базовый шрифт
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+// Удаляем выделение для ссылок
+a {
+  text-decoration: none;
+}
+
+// Убираем маркеры для неупорядоченных списков
+ul,
+ol {
+  list-style: none;
+}
+
+// Устанавливаем стандартное поведение для формы и элементов ввода
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+// Убираем стили для встроенных медиа-элементов
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+// Устанавливаем стандартное отображение для элементов block-level
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+// Удаляем подчеркивание у ссылок при наведении
+a:hover {
+  text-decoration: none;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#root {
+  margin: 0;
+  padding: 0;
+  display: flex !important;
+  flex-direction: column;
+  height: 100%;
+}

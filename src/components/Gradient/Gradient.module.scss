@@ -1,0 +1,47 @@
+@import "src/mixin/mixin.scss";
+
+.gradientContainer {
+  @include custom-card(400px, 100px, white, 2px solid #999);
+  .gradient {
+    @include gradient(
+      #ffff66,
+      #ffcc33,
+      #cc9966,
+      #ff6600,
+      #ff3300,
+      #ff6666,
+      #cc3333,
+      #ff0066,
+      #ff0099,
+      #ff33cc,
+      #ff66ff,
+      #cc00cc,
+      #cc00ff,
+      #9933ff,
+      #6600cc,
+      #6633ff,
+      #6666cc,
+      #3300cc,
+      #0000ff,
+      #3366cc,
+      #0099ff,
+      #00ccff,
+      #339999,
+      #66ffff,
+      #33ffcc,
+      #00cc99,
+      #00ff99,
+      #33ff66,
+      #66cc66,
+      #00ff00,
+      #33ff00,
+      #66cc00,
+      #99cc66,
+      #ccff33,
+      #999966,
+      #999999
+    );
+    width: 100%;
+    height: 100%;
+  }
+}

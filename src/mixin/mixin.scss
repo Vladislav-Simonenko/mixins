@@ -1,0 +1,146 @@
+// Кроссбраузерные миксины для CSS-префиксов:
+@mixin prefix($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+//Миксин для градиентов:
+@mixin gradient($colors...) {
+  background: linear-gradient(145deg, $colors);
+}
+
+//Миксин для анимации:
+@mixin animation($name, $duration, $timing-function, $delay, $iteration-count) {
+  animation: $name $duration $timing-function $delay $iteration-count;
+}
+
+//Миксин для создания тени:
+@mixin box-shadow($x, $y, $blur, $spread, $color) {
+  box-shadow: $x $y $blur $spread $color;
+}
+
+//Миксин для создания адаптивных шрифтов:
+@mixin responsive-font(
+  $min-font-size,
+  $max-font-size,
+  $min-screen-size,
+  $max-screen-size
+) {
+  font-size: $min-font-size;
+  @media (min-width: $min-screen-size) {
+    font-size: calc(
+      #{$min-font-size} + #{$max-font-size - $min-font-size} *
+        ((100vw - #{$min-screen-size}) / #{$max-screen-size - $min-screen-size})
+    );
+  }
+  @media (min-width: $max-screen-size) {
+    font-size: $max-font-size;
+  }
+}
+
+// Миксин для флекс-контейнера
+@mixin flex-container($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Миксин для флекс-элемента
+@mixin flex-item($flex: 1) {
+  flex: $flex;
+}
+
+// Миксин для создания грида
+@mixin grid-container(
+  $columns: 3,
+  $rows: 3,
+  $content,
+  $item,
+  $alignItem,
+  $justifyItem,
+  $gap: 20px
+) {
+  display: grid;
+  justify-content: $content;
+  align-content: $item;
+  align-items: $alignItem;
+  justify-items: $justifyItem;
+  grid-template-rows: repeat($rows, 1fr);
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+// Миксин для грид-элемента
+@mixin grid-item($row: auto, $col: auto) {
+  grid-row: $row;
+  grid-column: $col;
+}
+
+// Миксин для карточки с задаваемыми размерами
+@mixin custom-card(
+  $width,
+  $height,
+  $background: #fff,
+  $border: 1px solid #ddd
+) {
+  width: $width;
+  height: $height;
+  background: $background;
+  border: $border;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+//Миксин для границ
+@mixin border($width, $style, $color) {
+  border: $width $style $color;
+}
+
+//Миксин для текстовых теней:
+@mixin text-shadow($x, $y, $blur, $color) {
+  text-shadow: $x $y $blur $color;
+}
+
+//Миксин для анимации с ключевыми кадрами:
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+//Миксин для горизонтального и вертикального выравнивания элементов:
+@mixin center($axis: both) {
+  @if $axis == both {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } @else if $axis == horizontal {
+    display: flex;
+    justify-content: center;
+  } @else if $axis == vertical {
+    display: flex;
+    align-items: center;
+  }
+}
+
+//Миксин форматирования текста:
+@mixin format-text(
+  $font-family,
+  $font-size,
+  $font-weight,
+  $text-color,
+  $line-height,
+  $text-align
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $text-color;
+  line-height: $line-height;
+  text-align: $text-align;
+}
