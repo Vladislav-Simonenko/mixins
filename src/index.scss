@@ -74,24 +74,20 @@ video {
   vertical-align: baseline;
 }
 
-// Устанавливаем базовый шрифт
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 
-// Удаляем выделение для ссылок
 a {
   text-decoration: none;
 }
 
-// Убираем маркеры для неупорядоченных списков
 ul,
 ol {
   list-style: none;
 }
 
-// Устанавливаем стандартное поведение для формы и элементов ввода
 button,
 input,
 select,
@@ -99,14 +95,12 @@ textarea {
   margin: 0;
 }
 
-// Убираем стили для встроенных медиа-элементов
 audio,
 canvas,
 video {
   display: inline-block;
 }
 
-// Устанавливаем стандартное отображение для элементов block-level
 article,
 aside,
 details,
@@ -121,7 +115,6 @@ section {
   display: block;
 }
 
-// Удаляем подчеркивание у ссылок при наведении
 a:hover {
   text-decoration: none;
 }
