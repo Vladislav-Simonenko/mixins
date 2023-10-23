@@ -1,7 +1,7 @@
 @import "src/mixin/mixin.scss";
 
 .alignmentContainer {
-  @include custom-card(400px, 100px, white, 2px solid #999);
+  @include custom-card(auto, auto, white, 2px solid #999);
 
   .alignment {
     @include center;

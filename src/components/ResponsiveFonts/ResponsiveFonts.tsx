@@ -3,7 +3,7 @@ import styles from "./ResponsiveFonts.module.scss";
 export const ResponsiveFonts = () => {
   return (
     <div className={styles.responsiveFontsContainer}>
-      <div className={styles.responsiveFonts}>
+      <pre className={styles.responsiveFonts}>
         {`@mixin responsive-font(
   $min-font-size,
   $max-font-size,
@@ -21,7 +21,7 @@ export const ResponsiveFonts = () => {
     font-size: $max-font-size;
   }
 }`}
-      </div>
+      </pre>
     </div>
   );
 };

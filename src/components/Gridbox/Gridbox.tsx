@@ -3,7 +3,7 @@ import styles from "./Gridbox.module.scss";
 export const Gridbox = () => {
   return (
     <div className={styles.gridboxContainer}>
-      <div className={styles.gridbox}>
+      <pre className={styles.gridbox}>
         {`@mixin grid-container(
   $columns: 3,
   $rows: 3,
@@ -22,13 +22,13 @@ export const Gridbox = () => {
   grid-template-columns: repeat($columns, 1fr);
   gap: $gap;
 }`}
-        <div
+        <pre
           className={styles.gridboxItem}
         >{`@mixin grid-item($row: auto, $col: auto) {
   grid-row: $row;
   grid-column: $col;
-}`}</div>
-      </div>
+}`}</pre>
+      </pre>
     </div>
   );
 };
