@@ -1,8 +1,9 @@
 @import "src/mixin/mixin.scss";
 
 .gradientContainer {
-  @include custom-card(400px, 100px, white, 2px solid #999);
+  @include custom-card(auto, 200px, white, 2px solid #999);
   .gradient {
+    color: black;
     @include gradient(
       #ffff66,
       #ffcc33,

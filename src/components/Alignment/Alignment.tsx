@@ -3,7 +3,7 @@ import styles from "./Alignment.module.scss";
 export const Alignment = () => {
   return (
     <div className={styles.alignmentContainer}>
-      <div className={styles.alignment}>{`@mixin format-text(
+      <pre className={styles.alignment}>{`@mixin format-text(
   $font-family,
   $font-size,
   $font-weight,
@@ -18,7 +18,7 @@ export const Alignment = () => {
   line-height: $line-height;
   text-align: $text-align;
 }
-`}</div>
+`}</pre>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 @import "src/mixin/mixin.scss";
 
 .textShadowsContainer {
-  @include custom-card(400px, 100px, white, 2px solid #999);
+  @include custom-card(auto, auto, white, 2px solid #999);
 
   .textShadows {
     @include text-shadow(10px, 10px, 10px, gray);

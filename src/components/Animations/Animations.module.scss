@@ -1,7 +1,7 @@
 @import "src/mixin/mixin.scss";
 
 .animarionsContainer {
-  @include custom-card(400px, 100px, white, 2px solid #999);
+  @include custom-card(auto, auto, white, 2px solid #999);
   .animations {
     @include animation(my-slide, 2s, ease-in, 2s, infinite);
   }
@@ -9,12 +9,12 @@
 
 @include keyframes(my-slide) {
   0% {
-    transform: translateY(0);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(40px);
+    transform: translateY(20px);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(0px);
   }
 }
