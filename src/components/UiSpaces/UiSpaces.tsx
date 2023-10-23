@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./UiSpaces.module.scss";
 
 export const UiSpaces = () => {
