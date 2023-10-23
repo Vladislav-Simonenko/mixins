@@ -1,0 +1,10 @@
+@import "src/mixin/mixin.scss";
+
+.uiSpacesContainer {
+  @include custom-card(auto, auto, white, 2px solid #999);
+
+  .uiSpaces {
+    @include ui-space(top, 2);
+    height: $ui-step * 25;
+  }
+}

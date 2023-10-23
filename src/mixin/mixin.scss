@@ -1,3 +1,12 @@
+$ui-index-1: 1; /*for default components*/
+$ui-index-2: 2; /*for default components over component 1*/
+$ui-index-3: 3; /*for mask*/
+$ui-index-4: 4; /*for sidebar*/
+$ui-index-5: 5; /*for modal*/
+$ui-index-6: 6; /*for overlapping ALL*/
+
+//
+
 // Кроссбраузерные миксины для CSS-префиксов:
 @mixin prefix($property, $value) {
   -webkit-#{$property}: $value;
@@ -144,3 +153,97 @@
   line-height: $line-height;
   text-align: $text-align;
 }
+
+//Cоздания отступов для элементов
+$ui-step: 1rem;
+
+@mixin ui-space($direction, $size) {
+  @if unitless($size) {
+    @warn "Please provide a unit for the size argument. Using 'rem' as the default unit.";
+    $size: $size * 1rem;
+  }
+
+  @if $direction == top {
+    margin-top: $size;
+  } @else if $direction == bottom {
+    margin-bottom: $size;
+  } @else if $direction == left {
+    margin-left: $size;
+  } @else if $direction == right {
+    margin-right: $size;
+  } @else {
+    @warn "Invalid direction provided. Use 'top', 'bottom', 'left', or 'right'.";
+  }
+}
+
+//Создание кнопок
+@mixin button($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+//Создание элементов списка
+@mixin button($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+// Центрирование по горизонтали и вертикали
+@mixin center-element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Создание круглых изображений
+@mixin round-image($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+//Создание ссылок в тексте
+@mixin link-styles($link-color, $hover-color) {
+  color: $link-color;
+  text-decoration: none;
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+//Границы с закруглением
+@mixin rounded-border($radius) {
+  border: 1px solid #ccc;
+  border-radius: $radius;
+}
+
+//Анимация вращения
+@mixin rotate-animation($duration: 1s) {
+  animation: rotate $duration infinite linear;
+  @include keyframes(rotate) {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+//Переключение темы
