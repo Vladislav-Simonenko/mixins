@@ -2,6 +2,7 @@ import {
   Alignment,
   Animations,
   Borders,
+  ButtonCreate,
   ExpandableContainer,
   Flexbox,
   Gradient,
@@ -10,6 +11,7 @@ import {
   ResponsiveFonts,
   Shadows,
   TextShadows,
+  UiSpaces,
 } from "..";
 import styles from "./Main.module.scss";
 
@@ -54,6 +56,14 @@ export const Main = () => {
 
       <ExpandableContainer text={"Alignment"}>
         <Alignment />
+      </ExpandableContainer>
+
+      <ExpandableContainer text={"Spaces"}>
+        <UiSpaces />
+      </ExpandableContainer>
+
+      <ExpandableContainer text={"Create Button"}>
+        <ButtonCreate />
       </ExpandableContainer>
     </div>
   );

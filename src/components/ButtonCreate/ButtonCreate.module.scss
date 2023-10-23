@@ -1,0 +1,9 @@
+@import "src/mixin/mixin.scss";
+
+.buttonCreateContainer {
+  @include custom-card(auto, auto, white, 2px solid #999);
+
+  .buttonCreate {
+    @include button(orange, white);
+  }
+}
